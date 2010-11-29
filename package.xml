@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfWidgetWordCounterPlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>A jQuery word counter that counts the words in a given input field and displays the counter in a html tag.</summary>
+ <description>Jquery word counter</description>
+ <lead>
+  <name>Peter Fisher</name>
+  <user>pfwd</user>
+  <email>work@peterfisher.me.uk</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-11-28</date>
+ <time>20:10:12</time>
+ <version>
+  <release>1.0.2</release>
+  <api>1.0.2</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.symfony-project.org/license">MIT license</license>
+ <notes>
+-
+ </notes>
+ <contents>
+  <dir name="/">
+   <file md5sum="05d38dd7e581434c11ebd981730dfa0c" name="lib/widget/sfWidgetWordCounter.class.php" role="data"/>
+   <file md5sum="bd87a91e1cc2b732d4c8890cde261b1e" name="web/js/wordCounter.jQuery.js" role="data"/>
+   <file md5sum="70adb4bc93442e4e3955ba18398dd717" name="README" role="data"/>
+   <file md5sum="76c57a11e54b1f371d4e85ddfb0910c3" name="LICENSE" role="data"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.1.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   
+  </required>
+ </dependencies>
+ <phprelease/>
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.2</release>
+    <api>1.1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2010-11-28</date>
+   <license uri="http://www.symfony-project.org/license">MIT license</license>
+   <notes>
+* Fixes to readme file
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.1</release>
+    <api>1.1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2010-11-28</date>
+   <license uri="http://www.symfony-project.org/license">MIT license</license>
+   <notes>
+* Fixes to readme file
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.0</release>
+    <api>1.1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2010-11-28</date>
+   <license uri="http://www.symfony-project.org/license">MIT license</license>
+   <notes>
+* Initial creation of plugin
+   </notes>
+  </release>
+ </changelog>
+</package>

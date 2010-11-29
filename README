@@ -1,0 +1,92 @@
+# sfWidgetWordCounter plugin (for Symfony 1.3, 1.4)
+
+The `sfWidgetWordCounterPlugin` is a Symfony widget that adds a
+jQuery word counter to a form field. This is a jQuery word counter
+that counts the words in a given input field and displays the
+counter in a html tag.
+
+# Features
+
+The features of the counter are:
+
+-   A word limit can be supplied. This makes the counter count down
+    from the limit
+
+-   A custom message can be displayed when this word limit is
+    breached
+
+-   Negative numbers can be shown. This is used when the limit is
+    breached.
+
+
+## Installation
+
+Install the plugin (via a package)
+
+
+    symfony plugin:install sfWidgetWordCounterPlugin
+
+
+Activate the plugin in the
+apps/YOUR\_APP/config/ProjectConfiguration.class.php
+
+
+    class ProjectConfiguration extends sfProjectConfiguration
+    {
+      public function setup()
+      {
+        $this->enablePlugins('sfWidgetWordCounterPlugin');
+      }
+    }
+
+
+Publish the plugins assets
+      symfony plugin:publish-assets
+
+Add the js path to the view.yml
+
+      javascripts:    [ ../sfWidgetWordCounterPlugin/js/wordCounter.jQuery.js]
+
+Add the widget to the autoload.yml
+
+    sfWidgetWordCounterPlugin:
+      name:           sfWidgetWordCounterPlugin lib
+      path:           %SFPLUGINSDIR%/sfWidgetWordCounterPlugin/lib/Widget/*
+      recursive:      on
+
+Add the counter widget to the form
+
+      $this->widgetSchema['counter'] = new sfWidgetWordCounter( array(
+          "counterid"=>"IDOFFIELDTOCOUNT",
+          "targetid"=> "IDOFCOUNTER",
+          "config"=>"{
+            //Options
+    
+      }"
+    ));
+
+Clear you cache
+    symfony cc
+
+# jQueryPlugin Options
+
+-   limit
+    -   This is the word limit by default this is set to null so the
+        counter will just just keep counting upwards
+
+-   defaultNoLimitFormat
+    -   This is the text that is displayed when there isn't a limit by
+        default its set to "Word count: count%"
+
+-   limitExceededFormat
+    -   This is the text that is displayed if the word count breaches
+        the limit by default its set to "Remove count% word(s)"
+
+-   limitNotExceededFormat
+    -   This is the text that is displayed if the limit hasn't been
+        exceeded (This is used if limit is true)
+
+-   defaultSearch
+    -   This is the keyword that is used to search in the messages.
+        This is replaced by the value of the counter
+
