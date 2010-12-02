@@ -95,7 +95,7 @@ Clear you cache
 
 ## Standard counter
 
-This would produce a basic counter that just incerments the count each time a word is added to the input field
+This would produce a basic counter that just increments the count each time a word is added to the input field
 
     // Form
     $this->widgetSchema['example_1'] = new sfWidgetWordCounter( array(
