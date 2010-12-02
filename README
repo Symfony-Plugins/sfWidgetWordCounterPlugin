@@ -66,6 +66,7 @@ Add the counter widget to the form
     ));
 
 Clear you cache
+
     symfony cc
 
 # jQueryPlugin Options
