@@ -91,50 +91,50 @@ Clear you cache
     -   This is the keyword that is used to search in the messages.
         This is replaced by the value of the counter
 
-## Examples of use
+# Examples of use
 
-# Standard counter
+## Standard counter
 
 This would produce a basic counter that just incerments the count each time a word is added to the input field
 
     // Form
     $this->widgetSchema['example_1'] = new sfWidgetWordCounter( array(
-          "counterid"=>"example_1",
-          "targetid"=> "word_count"
+        "counterid"=>"example_1",
+        "targetid"=> "word_count"
     ));
 
     // Rendered jQuery
     $('example_1').wordCounter('example_1','word_count');
 
-# Basic with custom message
+## Basic with custom message
 
 This would produce the above but with a custom message
 
     // Form
     $this->widgetSchema['example_2'] = new sfWidgetWordCounter( array(
-          "counterid"=>"example_2",
-          "targetid"=> "word_count"
-          "config" => "{
-          defaultNoLimitFormat: "You have managed to write count% word(s)"
+            "counterid"=>"example_2",
+            "targetid"=> "word_count"
+            "config" => "{
+            defaultNoLimitFormat: "You have managed to write count% word(s)"
           }"
      ));
 
     // Rendered jQuery
     $('example-2').wordCounter('example-2','word-count-2',{
-	defaultNoLimitFormat	: "You have managed to write count% word(s)"
+        defaultNoLimitFormat	: "You have managed to write count% word(s)"
     });
 
-# Limit example 1
+## Limit example 1
 
 Instead of the word count increasing it decreases until the limit is met.
 When this happens the user is told how many words are needed to be removed until the word count is 0.
 
     // Form
     $this->widgetSchema['example_3'] = new sfWidgetWordCounter( array(
-          "counterid"=>"example_3",
-          "targetid"=> "word_count"
-          "config" => "{
-          limit: 5
+            "counterid"=>"example_3",
+            "targetid"=> "word_count"
+            "config" => "{
+            limit: 5
           }"
      ));
 
@@ -143,43 +143,46 @@ When this happens the user is told how many words are needed to be removed until
 	limit	:	5
     });
 
-# Limit example 2
+## Limit example 2
 
 Same as previous example but custom messages are used.
 
     // Form
     $this->widgetSchema['example_4'] = new sfWidgetWordCounter( array(
-          "counterid"=>"example_4",
-          "targetid"=> "word_count"
-          "config" => "{
-           limit	:	5,
-	   limitExceededFormat: 'Oh no you have exceeded the word count by count% word(s)',
-	   limitNotExceededFormat: 'Words left count%'
+        "counterid"=>"example_4",
+        "targetid"=> "word_count"
+        "config" => "{
+            limit : 5,
+            limitExceededFormat : 'Oh no you have exceeded the word count by count% word(s)',
+            limitNotExceededFormat : 'Words left count%'
           }"
       ));
 
     // Rendered jQuery
     $('example_4').wordCounter('example_4','word-count-4',{
-	limit	:	5,
-	limitExceededFormat: 'Oh no you have exceeded the word count by count% word(s)',
-	limitNotExceededFormat: 'Words left count%'
+        limit : 5,
+        limitExceededFormat: 'Oh no you have exceeded the word count by count% word(s)',
+        limitNotExceededFormat: 'Words left count%'
     });
 
-# Showing negative numbers when the limit have been exceeded
+## Showing negative numbers when the limit has been exceeded
 
     // Form
-    $this->widgetSchema['example_4'] = new sfWidgetWordCounter( array(
-	limit	:	5,
-	limitExceededFormat: 'Words left count%',
-	limitNotExceededFormat: 'Words left count%',
-	showNegativeNumbers	: 1
+    $this->widgetSchema['example_5'] = new sfWidgetWordCounter( array(
+        "counterid"=>"example_5",
+        "targetid"=> "word_count"
+        "config" => "{
+            limit : 5,
+            limitExceededFormat: 'Words left count%',
+            limitNotExceededFormat: 'Words left count%',
+            showNegativeNumbers	: 1
           }"
      ));
 
     // Rendered jQuery
     $('example_5').wordCounter('example_5','word-count-5',{
-	limit	:	5,
-	limitExceededFormat: 'Words left count%',
-	limitNotExceededFormat: 'Words left count%',
-	showNegativeNumbers	: 1
+        limit :	5,
+        limitExceededFormat: 'Words left count%',
+        limitNotExceededFormat: 'Words left count%',
+        showNegativeNumbers	: 1
     });
