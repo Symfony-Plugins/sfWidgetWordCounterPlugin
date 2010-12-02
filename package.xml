@@ -11,9 +11,9 @@
         <active>yes</active>
     </lead>
     <date>2010-12-02</date>
-    <time>21:25:12</time>
+    <time>21:49:12</time>
     <version>
-        <release>1.0.5</release>
+        <release>1.0.6</release>
         <api>1.0.0</api>
     </version>
     <stability>
@@ -51,6 +51,21 @@
     </dependencies>
     <phprelease/>
     <changelog>
+        <release>
+            <version>
+                <release>1.0.6</release>
+                <api>1.0.0</api>
+            </version>
+            <stability>
+                <release>stable</release>
+                <api>stable</api>
+            </stability>
+            <date>2010-12-02</date>
+            <license uri="http://www.symfony-project.org/license">MIT license</license>
+            <notes>
+* Fixed spelling mistake in readme
+            </notes>
+        </release>
         <release>
             <version>
                 <release>1.0.5</release>
